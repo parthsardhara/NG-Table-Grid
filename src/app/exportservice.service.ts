@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-import * as FileSaver from 'file-saver';
-import * as XLSX from 'xlsx';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +9,11 @@ export class ExportService {
 
   // using import * as XLSX from 'xlsx'; package
   // [  
+  // "file-saver": "^2.0.2",
+  // "xlsx": "^0.14.3",
+  // import * as FileSaver from 'file-saver';
+  // import * as XLSX from 'xlsx';
+
   // fileType = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8';
   // fileExtension = '.xlsx';
   // public exportExcel(jsonData: any[], fileName: string): void {
