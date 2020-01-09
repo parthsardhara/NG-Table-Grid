@@ -11,7 +11,7 @@ import { ExportService } from '../exportservice.service';
   styleUrls: ['./table-sorting.component.css']
 })
 export class TableSortingComponent {
-  customers: any = [];
+  countries: any = [];
   countries$: Observable<Country[]>;
   total$: Observable<number>;
 
@@ -25,9 +25,9 @@ export class TableSortingComponent {
 
   pagechange() {
     this.countries$.source.forEach((element) => {
-      this.customers = [];
+      this.countries = [];
       element.forEach(element => {
-        this.customers.push({ id: `${element.id}`, name: `${element.name}`, flag: `${element.flag}`, area: `${element.area}`, population: `${element.population}` });
+        this.countries.push({ id: `${element.id}`, name: `${element.name}`, flag: `${element.flag}`, area: `${element.area}`, population: `${element.population}` });
       });
     });
   }
@@ -44,7 +44,7 @@ export class TableSortingComponent {
   }
 
   export() {
-    this.exportService.exportExcel(this.customers, 'customers');
+    this.exportService.exportExcel(this.countries, 'countries');
   }
 
 }
