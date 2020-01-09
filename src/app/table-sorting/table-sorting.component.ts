@@ -44,7 +44,7 @@ export class TableSortingComponent {
   }
 
   export() {
-    this.exportService.exportExcel(this.countries, 'countries');
+    this.exportService.generateCSVService(this.countries, 'countries');
   }
 
 }
